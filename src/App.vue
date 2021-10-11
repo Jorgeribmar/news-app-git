@@ -1,30 +1,46 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <img src="./assets/Sky-news-logo.png" class="logo" />
+    <div class="home">
+      <router-link class="lien" to="/">News</router-link> |
+      <router-link class="lien" to="/Search">Search</router-link>
+    </div>
   </div>
   <router-view />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0px;
+  background-color: #c5c5c5;
+}
+
+.logo {
+  width: 40%;
+  margin-top: 2%;
+  margin-right: 25%;
+}
+.lien {
+  text-decoration: none;
+  color: black;
+}
+.lien:hover {
+  text-decoration: underline;
+}
+
+.home {
+  margin-right: 5%;
+  margin-top: 5%;
+  font-family: "Roboto", sans-serif;
+  font-size: 170%;
+  text-decoration: none;
+  color: black;
 }
 
 #nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
